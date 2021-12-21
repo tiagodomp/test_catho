@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+  function:
+    volumes:
+      - ./:/home/api
+    build: .
+    ports:
+      - ${API_PORT}:3000
+    working_dir: /home/api
+    environment:
+      __BASEPATH__: /home/api
+    command: sh -c "yarn install && yarn run start"

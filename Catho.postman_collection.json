@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "88560073-ad4b-457f-a9ac-44d90aebe252",
+		"name": "Catho",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Candidate",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n   {\n      \"id\": \"ae588a6b-4540-8463-bfe2-a5c2a65f556b\",\n      \"name\": \"Tiago 123\",\n      \"skills\": [ \"php\", \"es6\", \"nodejs\", \"express\" ]\n    },\n    {\n      \"id\": \"ae588a6b-9576-5714-bfe2-a5c2a65f547b\",\n      \"name\": \"John 321\",\n      \"skills\": [ \"javascript\", \"es6\", \"nodejs\", \"express\" ]\n    },\n    {\n      \"id\": \"person2\",\n      \"name\": \"Amy Fish\",\n      \"skills\": [ \"go\", \"elixir\", \"erlang\" ]\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/candidate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/candidate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/candidate/id/ae588a6b-4540-5714-bfe2-a5c2a65f547b",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidate",
+								"id",
+								"ae588a6b-4540-5714-bfe2-a5c2a65f547b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBySkills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/candidate/skills/php",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"candidate",
+								"skills",
+								"php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
