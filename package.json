@@ -1,0 +1,25 @@
+{
+  "name": "api_catho",
+  "description": "test Api Catho",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "nodemon ./bin/server.js"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "express-validator": "^6.14.0",
+    "lodash.filter": "^4.6.0",
+    "lodash.find": "^4.6.0",
+    "lodash.pick": "^4.4.0",
+    "lodash.reject": "^4.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "nodemon": "^1.17.3"
+  },
+  "private": true
+}
